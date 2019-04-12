@@ -27,6 +27,8 @@ dependencies:
   image_picker: ^0.4.12
   video_player: ^0.8.0
   charts_flutter: ^0.6.0
+  common_utils: ^1.1.1
+  dio: 2.1.2
   fusion: 
     git: 
       url: https://github.com/wo2888/qmcore.git

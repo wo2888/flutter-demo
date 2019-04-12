@@ -4,7 +4,6 @@ import '../views/detail.dart';
 class MyList extends StatefulWidget{
   @override
   ListState createState() => new ListState();
-
 }
 
 class ListState extends State<MyList>{
