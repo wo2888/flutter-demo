@@ -76,25 +76,25 @@ class SimpleSeriesLegend extends StatelessWidget {
 
     return [
       new charts.Series<OrdinalSales, String>(
-        id: '集团',
+        id: 'X80',
         domainFn: (OrdinalSales sales, _) => sales.year,
         measureFn: (OrdinalSales sales, _) => sales.sales,
         data: desktopSalesData,
       ),
       new charts.Series<OrdinalSales, String>(
-        id: '红旗',
+        id: 'X40',
         domainFn: (OrdinalSales sales, _) => sales.year,
         measureFn: (OrdinalSales sales, _) => sales.sales,
         data: tabletSalesData,
       ),
       new charts.Series<OrdinalSales, String>(
-        id: '大众',
+        id: 'T77',
         domainFn: (OrdinalSales sales, _) => sales.year,
         measureFn: (OrdinalSales sales, _) => sales.sales,
         data: mobileSalesData,
       ),
       new charts.Series<OrdinalSales, String>(
-        id: '解放',
+        id: 'B50',
         domainFn: (OrdinalSales sales, _) => sales.year,
         measureFn: (OrdinalSales sales, _) => sales.sales,
         data: otherSalesData,
@@ -147,25 +147,25 @@ class SimpleSeriesLegend extends StatelessWidget {
 
     return [
       new charts.Series<OrdinalSales, String>(
-        id: '集团',
+        id: 'X80',
         domainFn: (OrdinalSales sales, _) => sales.year,
         measureFn: (OrdinalSales sales, _) => sales.sales,
         data: desktopSalesData,
       ),
       new charts.Series<OrdinalSales, String>(
-        id: '红旗',
+        id: 'X40',
         domainFn: (OrdinalSales sales, _) => sales.year,
         measureFn: (OrdinalSales sales, _) => sales.sales,
         data: tabletSalesData,
       ),
       new charts.Series<OrdinalSales, String>(
-        id: '大众',
+        id: 'T77',
         domainFn: (OrdinalSales sales, _) => sales.year,
         measureFn: (OrdinalSales sales, _) => sales.sales,
         data: mobileSalesData,
       ),
       new charts.Series<OrdinalSales, String>(
-        id: '解放',
+        id: 'B50',
         domainFn: (OrdinalSales sales, _) => sales.year,
         measureFn: (OrdinalSales sales, _) => sales.sales,
         data: otherSalesData,

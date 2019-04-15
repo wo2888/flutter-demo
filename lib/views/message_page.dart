@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:myapp1/pages/demopg01.dart';
-import 'package:myapp1/pages/demopg02.dart';
-import 'package:myapp1/pages/demopg03.dart';
+import '../pages/demopg01.dart';
+import '../pages/demopg02.dart';
+import '../pages/demopg03.dart';
+import '../pages/demopg04.dart';
+import '../pages/demopg05.dart';
 // import '../components/list.dart';
 
-// import 'package:myapp1/index.dart';
+// import '../index.dart';
 import '../views/index_page.dart';
 
 import 'package:fusion/index.dart';
@@ -26,6 +28,10 @@ class MessagePageState extends State<MessagePage> {
       pg = new DemoPage1();
     } else if( item.id == '002'){
       pg = new DemoPage2();
+    } else if( item.id == '003'){
+      pg = new DemoPage3();
+    } else if(item.id == '004'){
+      pg = new DemoPage4();
     }else{
       pg = new IndexPage();
     }
@@ -41,9 +47,9 @@ class MessagePageState extends State<MessagePage> {
         body: new QMPersonCenter(
         bgImage: 'assets/images/common_user_background.png',
         desc: new QMPersonDescription(
-          title: '集团驾驶舱', content: '一汽集团驾驶舱一期项目的整体成果概览'),
+          title: '一汽轿车', content: '一汽轿车驾驶舱一期项目的整体成果概览'),
           user: new QMPerson(
-              name: '张善旭',
+              name: '管理员用户',
               photo: 'assets/images/avatar.png',
               desc: '高级系统架构员',
               list: [
@@ -72,7 +78,7 @@ class MessagePageState extends State<MessagePage> {
                   completed: false
                 ),
                 new QMPersonItem(
-                  id: '001',
+                  id: '003',
                   name: "账务概览-客户服务节选1",
                   category: "账务概览",
                   time: "2018年12月",
@@ -80,7 +86,7 @@ class MessagePageState extends State<MessagePage> {
                   completed: true
                 ),
                 new QMPersonItem(
-                  id: '000',
+                  id: '004',
                   name: "客户服务节选1",
                   category: "客服专题",
                   time: "2018年12月",

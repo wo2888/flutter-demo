@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp1/pages/demo1.dart';
+import '../pages/demo1.dart';
 import '../pages/demo0.dart';
 
 class DemoPage extends StatefulWidget {
@@ -38,7 +38,7 @@ class DemoPageState extends State<DemoPage> {
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: new AppBar(
-          title: new Text('财务概览'),
+          title: new Text('营业收入'),
         ),
         body: new Stack(
           fit: StackFit.expand,
@@ -47,19 +47,7 @@ class DemoPageState extends State<DemoPage> {
               decoration: BoxDecoration(color: Colors.white70),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: <Widget>[
-                  FlatButton(
-                      onPressed: ()=>{
-                        _handleButtonPress()
-                      },
-                      color: Colors.blueAccent,
-                      child: Text('刷新',
-                        style: TextStyle(
-                              color: Colors.white70,
-                              fontSize: 18.0,
-                              fontWeight: FontWeight.bold)
-                      ),
-                      ), 
+                children: <Widget>[ 
                   Padding(padding: EdgeInsets.fromLTRB(5, 5, 5, 5)),
                   new Expanded(
                     child: new GridView.count(
@@ -94,6 +82,9 @@ class DemoPageState extends State<DemoPage> {
               ),
             )
           ],
-        ));
+        ),
+        floatingActionButton: new FloatingActionButton(
+          child: new Icon(Icons.refresh), onPressed: _handleButtonPress),
+      );
   }
 }

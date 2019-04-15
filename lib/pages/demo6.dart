@@ -38,13 +38,16 @@ class GaugeChart extends StatelessWidget {
           behaviors: [new charts.DatumLegend(
             position: charts.BehaviorPosition.end,
             outsideJustification: charts.OutsideJustification.endDrawArea,
-          )],
+          ),
+          // _richText('84%', '年累计完成率'),
+          ],
           // Configure the width of the pie slices to 30px. The remaining space in
           // the chart will be left as a hole in the center. Adjust the start
           // angle and the arc length of the pie so it resembles a gauge.
           defaultRenderer: new charts.ArcRendererConfig(
               arcWidth: 10, startAngle: -1 / 2 * pi, arcLength: 2 * pi)),
         new Positioned(
+          
           left: -80,
           top: 120,
           right: 10,

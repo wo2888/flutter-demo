@@ -25,6 +25,13 @@ class DonutAutoLabelChart extends StatelessWidget {
   Widget build(BuildContext context) {
     return new charts.PieChart(seriesList,
         animate: animate,
+        behaviors: [
+          new charts.ChartTitle('批售周报',
+            behaviorPosition: charts.BehaviorPosition.top,
+            titleOutsideJustification:
+                charts.OutsideJustification.start),
+
+        ],
         // Configure the width of the pie slices to 60px. The remaining space in
         // the chart will be left as a hole in the center.
         //
@@ -49,10 +56,10 @@ class DonutAutoLabelChart extends StatelessWidget {
   static List<charts.Series<LinearSales, int>> _createSampleData() {
     final random = new Random();
     final data = [
-      new LinearSales(0, random.nextInt(100),'红旗'),
-      new LinearSales(1, random.nextInt(100),'大众'),
-      new LinearSales(2, random.nextInt(100),'解放'),
-      new LinearSales(3, random.nextInt(100),'丰田'),
+      new LinearSales(0, random.nextInt(100),'X80'),
+      new LinearSales(1, random.nextInt(100),'X40'),
+      new LinearSales(2, random.nextInt(100),'T77'),
+      new LinearSales(3, random.nextInt(100),'B70'),
     ];
 
     return [

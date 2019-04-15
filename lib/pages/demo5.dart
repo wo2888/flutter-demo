@@ -38,7 +38,11 @@ class NumericComboLinePointChart extends StatelessWidget {
           new charts.PointRendererConfig(
               // ID used to link series to this renderer.
               customRendererId: 'customPoint')
-        ]);
+        ],
+      behaviors: [
+        new charts.SeriesLegend(),
+      ],
+        );
   }
 
   /// Create one series with sample hard coded data.
@@ -67,21 +71,21 @@ class NumericComboLinePointChart extends StatelessWidget {
 
     return [
       new charts.Series<LinearSales, int>(
-        id: '红旗',
+        id: 'X80',
         colorFn: (_, __) => charts.MaterialPalette.blue.shadeDefault,
         domainFn: (LinearSales sales, _) => sales.year,
         measureFn: (LinearSales sales, _) => sales.sales,
         data: desktopSalesData,
       ),
       new charts.Series<LinearSales, int>(
-        id: '解放',
+        id: 'X40',
         colorFn: (_, __) => charts.MaterialPalette.red.shadeDefault,
         domainFn: (LinearSales sales, _) => sales.year,
         measureFn: (LinearSales sales, _) => sales.sales,
         data: tableSalesData,
       ),
       new charts.Series<LinearSales, int>(
-          id: 'Mobile',
+          id: 'T77',
           colorFn: (_, __) => charts.MaterialPalette.green.shadeDefault,
           domainFn: (LinearSales sales, _) => sales.year,
           measureFn: (LinearSales sales, _) => sales.sales,

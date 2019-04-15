@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp1/pages/demo1.dart';
+import '../pages/demo1.dart';
 import '../pages/demo0.dart';
 import '../pages/demo3.dart';
 import '../pages/demo4.dart';
@@ -31,8 +31,8 @@ class DemoPageState extends State<DemoPage1> {
     // widgetList.add(SimpleSeriesLegend.withRandomData());
     // widgetList.add(DatumLegendWithMeasures.withRandomData());
 
-    widgetList.add(HorizontalBarLabelCustomChart.createWithSampleData());
     widgetList.add(DonutAutoLabelChart.withSampleData());
+    widgetList.add(BucketingAxisScatterPlotChart.withRandomData());
     // for (int i = 0; i < number; i++) {
     //   widgetList.add(SimpleBarChart.withSampleData());//getItemWidget());
     // }
@@ -43,7 +43,7 @@ class DemoPageState extends State<DemoPage1> {
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: new AppBar(
-          title: new Text('财务概览'),
+          title: new Text('批售周报节选'),
         ),
         body: new Stack(
           fit: StackFit.expand,
@@ -53,23 +53,11 @@ class DemoPageState extends State<DemoPage1> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  FlatButton(
-                      onPressed: ()=>{
-                        _handleButtonPress()
-                      },
-                      color: Colors.blueAccent,
-                      child: Text('刷新',
-                        style: TextStyle(
-                              color: Colors.white70,
-                              fontSize: 18.0,
-                              fontWeight: FontWeight.bold)
-                      ),
-                      ), 
                   Padding(padding: EdgeInsets.fromLTRB(5, 5, 5, 5)),
                   new Expanded(
                     child: new GridView.count(
                         primary: false,
-                        padding: const EdgeInsets.all(35.0),
+                        padding: const EdgeInsets.all(50.0),
                         mainAxisSpacing: 8.0, //竖向间距
                         crossAxisCount: 1, //横向Item的个数
                         crossAxisSpacing: 8.0, //横向间距
@@ -99,6 +87,9 @@ class DemoPageState extends State<DemoPage1> {
               ),
             )
           ],
-        ));
+        ),
+        floatingActionButton: new FloatingActionButton(
+          child: new Icon(Icons.refresh), onPressed: _handleButtonPress),
+        );
   }
 }

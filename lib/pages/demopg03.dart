@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:myapp1/pages/demo5.dart';
-import 'package:myapp1/pages/demo6.dart';
-import 'package:myapp1/pages/demo7.dart';
+import '../pages/demo5.dart';
+import '../pages/demo6.dart';
+import '../pages/demo7.dart';
 import '../pages/demo0.dart';
 
 class DemoPage2 extends StatefulWidget {
@@ -41,7 +41,7 @@ class DemoPageState extends State<DemoPage2> {
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: new AppBar(
-          title: new Text('财务概览'),
+          title: new Text('批售月报节选'),
         ),
         body: new Stack(
           fit: StackFit.expand,
@@ -51,18 +51,6 @@ class DemoPageState extends State<DemoPage2> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  FlatButton(
-                      onPressed: ()=>{
-                        _handleButtonPress()
-                      },
-                      color: Colors.blueAccent,
-                      child: Text('刷新',
-                        style: TextStyle(
-                              color: Colors.white70,
-                              fontSize: 18.0,
-                              fontWeight: FontWeight.bold)
-                      ),
-                      ), 
                   Padding(padding: EdgeInsets.fromLTRB(5, 5, 5, 5)),
                   new Expanded(
                     child: new GridView.count(
@@ -97,6 +85,9 @@ class DemoPageState extends State<DemoPage2> {
               ),
             )
           ],
-        ));
+        ),
+        floatingActionButton: new FloatingActionButton(
+          child: new Icon(Icons.refresh), onPressed: _handleButtonPress),
+        );
   }
 }

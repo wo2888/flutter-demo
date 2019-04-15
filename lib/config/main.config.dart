@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:myapp1/pages/demopg01.dart';
-import 'package:myapp1/views/home_page.dart';
+import '../views/home_page.dart';
 
 
 

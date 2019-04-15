@@ -49,32 +49,13 @@ class MyApp extends StatelessWidget {
       home: //new HomePage()
       // new DemoPage()
           new QMSplashScreen(
-        appName: '一汽集团驾驭舱',
-        description: '     整合业务数据 \n 体现集团运营状态',
+        appName: '一汽轿车驾驭舱',
+        description: '       整合业务数据 \n 体现一汽轿车运营状态',
         callback: _gotoMainPG,
       ),
     );
   }
 
-//   @override
-//  _MyHomePageState createState() => new _MyHomePageState();
-  // @override
-  // Widget build(BuildContext context) {
-  //   final wordPair = new WordPair.random();
-  //   return new MaterialApp(
-  //     title: 'Welcome to Flutter',
-  //     home: new Scaffold(
-  //       appBar: new AppBar(
-  //         title: new Text('Welcome to Flutter1'),
-  //       ),
-  //       body: new Center(
-  //         child: RandomWords(),
-  //         // child: new Text(wordPair.asPascalCase),
-  //         // child: new Text('Hello World'),
-  //       ),
-  //     ),
-  //   );
-  // }
 }
 
 
